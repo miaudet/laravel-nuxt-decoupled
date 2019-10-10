@@ -1,0 +1,2 @@
+#Ignore db for docker
+/mysql-datadir

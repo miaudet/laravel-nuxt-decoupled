@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+    web:
+        build: docker/web
+        environment:
+            XDEBUG_CONFIG: remote_host=host.docker.internal remote_port=9000 remote_enable=1
+        ports :
+            - "8000:80"
+            - "4343:443"
+            - "1521:1521"
+        volumes:
+            - ./api:/var/www
+    node:
+        image: node:12
+        volumes:
+            - "./client:/var/www/client"
+        ports:
+            - "3000:3000"
+        working_dir: "/var/www/client"
+        command: "npm run dev"
+        links : 
+            - web
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        ports :
+            - "8888:80"
+        environment:
+            PMA_HOST: database
+        
+    database:
+        image: mysql:5.7
+        volumes:
+            - ./mysql-datadir:/var/lib/mysql
+        environment:
+            - MYSQL_USER=root
+            - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+            - MYSQL_DATABASE=app
+            - MYSQL_USER=app
+            - MYSQL_PASSWORD=app
+        ports:
+            - "3307:3306"
