@@ -47,12 +47,4 @@ class User extends Authenticatable implements JWTSubject
     {
         return [];
     }
-
-    /**
-     * Get the comments for the blog post.
-     */
-    public function trophees()
-    {
-        return $this->hasMany('App\Trophee');
-    }
 }

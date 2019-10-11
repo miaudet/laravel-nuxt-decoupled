@@ -24,17 +24,7 @@
 <script>
 
 export default {
-  data () {
-    return {
-      id: this.$auth.user.id,
-      name: this.$auth.user.name,
-      email: this.$auth.user.email
-    }
-  },
-  methods: {
-    logout () {
-      this.$auth.logout()
-    }
-  }
+
 }
+
 </script>
