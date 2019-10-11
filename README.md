@@ -4,7 +4,7 @@ Projet de démarrage pour développer une api Laravel 6.0 avec un client Nuxt.js
 
 ## Installation
 
-**Il faut avoir npm et composer installé localement**
+**Il faut avoir NPM et Composer installé localement**
 
 1) Clôner le repo 
 
@@ -20,12 +20,12 @@ composer install
 
 4) Copier le fichier .env du root vers /api
 
-4) Démarrer Docker
+5) Démarrer Docker
 ```bash
 docker-compose up -d --build
 ```
 
-5) Exécuter les migrations pour la base de données
+6) Exécuter les migrations pour la base de données
 ```bash
 docker-compose exec web bash
 /var/www# php artisan migrate
