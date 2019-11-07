@@ -1,14 +1,10 @@
 <template>
-  <v-layout
-    column
-    justify-center
-    align-center
+  <v-row
+    align="start"
+    justify="center"
+    style="height: 100%;"
   >
-    <v-flex
-      xs12
-      sm8
-      md6
-    >
+    <v-col>
       <v-card>
         <v-card-title class="headline">
           Bienvenue dans ton application!
@@ -17,8 +13,8 @@
           Lorem ipsum
         </v-card-text>
       </v-card>
-    </v-flex>
-  </v-layout>
+    </v-col>
+  </v-row>
 </template>
 
 <script>

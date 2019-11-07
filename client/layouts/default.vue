@@ -11,14 +11,14 @@
       <v-btn
         v-if="this.$auth.loggedIn"
         color="primary"
-        class="ml-4"
+        class="ml-4 text-none"
         @click="logout"
       >
         Se déconnecter
       </v-btn>
     </v-app-bar>
     <v-content>
-      <v-container>
+      <v-container fill-height>
         <nuxt />
       </v-container>
     </v-content>
@@ -26,7 +26,20 @@
       :fixed="fixed"
       app
     >
-      <span>&copy; 2019</span>
+      <v-row style="min-height=60px;max-height:100px;" align="center" class="my-1">
+        <v-col sm="6">
+          <span>Réalisation : <a href="https://www.cstip.ulaval.ca/">Centre de services en TI et en pédagogie</a></span>
+        </v-col>
+        <v-col sm="6" align="right">
+          <v-btn
+            color="primary"
+            class="text-none"
+            href="mailto:aide@cstip.ulaval.ca"
+          >
+            aide@cstip.ulaval.ca
+          </v-btn>
+        </v-col>
+      </v-row>
     </v-footer>
   </v-app>
 </template>

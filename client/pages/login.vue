@@ -1,13 +1,13 @@
 <template>
-  <v-layout
-    column
-    justify-center
-    align-center
+  <v-row
+    align="center"
+    justify="center"
+    style="height: 100%;"
   >
-    <v-flex
-      xs12
-      sm8
-      md6
+    <v-col
+      xs="12"
+      sm="8"
+      lg="6"
     >
       <v-form
         ref="form"
@@ -39,8 +39,8 @@
           <v-card-actions>
             <v-spacer />
             <v-btn
+              class="text-none"
               color="primary"
-              class="mr-4"
               @click="login"
             >
               Se connecter
@@ -48,8 +48,8 @@
           </v-card-actions>
         </v-card>
       </v-form>
-    </v-flex>
-  </v-layout>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
