@@ -26,7 +26,7 @@
       :fixed="fixed"
       app
     >
-      <v-row style="min-height=60px;max-height:100px;" align="center" class="my-1">
+      <v-row align="center">
         <v-col sm="6">
           <span>Réalisation : <a href="https://www.cstip.ulaval.ca/">Centre de services en TI et en pédagogie</a></span>
         </v-col>
